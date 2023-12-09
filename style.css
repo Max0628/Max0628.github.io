@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+body header {
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+}
+body header nav {
+  justify-content: space-around;
+}
+body header nav ul {
+  display: flex;
+}
+body header nav ul li {
+  padding: 1rem 2rem;
+  list-style-type: none;
+  font-size: 1rem;
+}
+body header nav ul li:hover {
+  color: rgba(141, 141, 244, 0.6);
+}
+body main section.page-top {
+  height: 70vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+body main section.page-top div.text {
+  display: block;
+  padding: 1rem;
+}
+body main section.page-top div.text h1 {
+  font-size: 3rem;
+}
+body main section.page-top div.text h2 {
+  font-size: 1rem;
+}
+body main section.page-top div.text p {
+  background-color: rgba(141, 141, 244, 0.6);
+  margin-top: 2rem;
+  width: 5rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+body main section.page-top div.text p:hover {
+  transform: scale(1.2);
+}
+body main section.page-top div img {
+  width: 80vh;
+  height: 80vh;
+}
+body main section.about-me {
+  background-color: rgba(141, 141, 244, 0.6);
+  display: flex;
+  text-align: center;
+  padding: 3rem;
+  justify-content: center;
+}
+body main section.about-me h3 {
+  font-size: 2rem;
+}
+body main section.about-me p {
+  margin: 1rem;
+}
+body main section.about-me section.description {
+  width: 50%;
+}
+body main section.info {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+body main section.info section.table {
+  flex: 5 1 500px;
+  padding: 2rem;
+}
+body main section.info section.table table {
+  border-collapse: collapse;
+  --bs-table-bg: none;
+}
+body main section.info section.table table tr {
+  border-bottom: 2px solid grey;
+  transition: all 0.3s ease-in;
+}
+body main section.info section.table table tr:hover {
+  background-color: rgb(246, 234, 250);
+}
+body main section.info section.table table tr td {
+  padding: 1rem;
+}
+body main section.info section.image {
+  flex: 1 1 500px;
+  padding: 2rem;
+  align-items: strech;
+  position: relative;
+}
+body main section.info section.image img {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+}
+body main section.info section.image div.greenRect1 {
+  width: 30vw;
+  height: 90vh;
+  border: 15px solid rgba(141, 141, 244, 0.6);
+  position: absolute;
+  top: 0vh;
+  left: 10vh;
+  z-index: -3;
+}
+body main section.info section.image div.greenRect2 {
+  width: 68vw;
+  height: 19vh;
+  border: 15px solid rgba(141, 141, 244, 0.6);
+  position: absolute;
+  top: 40vh;
+  left: -50vh;
+  z-index: -2;
+}
+body main section.info section.image div.greenRect3 {
+  width: 55vw;
+  height: 14vh;
+  border: 15px solid rgba(141, 141, 244, 0.6);
+  position: absolute;
+  top: 35vh;
+  left: -30vh;
+  z-index: -2;
+}
+
+@media screen and (max-width: 578px) {
+  body section.description {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 800px) {
+  body main section.about-me section.description {
+    width: 100%;
+  }
+  body main section.info section.image div.greenRect1,
+  body main section.info section.image div.greenRect2,
+  body main section.info section.image div.greenRect3 {
+    display: none;
+  }
+}/*# sourceMappingURL=style.css.map */

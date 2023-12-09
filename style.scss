@@ -1,0 +1,204 @@
+$theme-Color: rgba(141, 141, 244, 0.6);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+body {
+  overflow-x: hidden;
+  header {
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    nav {
+      // border: 3px solid rgb(240, 240, 14);
+      justify-content: space-around;
+      ul {
+        display: flex;
+        li {
+          // border: 3px solid red;
+          padding: 1rem 2rem;
+          list-style-type: none;
+          font-size: 1rem;
+          &:hover {
+            color: $theme-Color;
+          }
+        }
+      }
+    }
+  }
+  main {
+    section.page-top {
+      height: 70vh;
+      // border: 3px solid red;
+      // background-color: white;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      div.text {
+        //border: 3px solid blue;
+        display: block;
+        padding: 1rem;
+
+        h1 {
+          font-size: 3rem;
+        }
+        h2 {
+          font-size: 1rem;
+        }
+        p {
+          //    border: 3px solid orange;
+          background-color: $theme-Color;
+          margin-top: 2rem;
+          width: 5rem;
+          height: 3rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transition: all 0.2s ease;
+
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
+      }
+      div img {
+        //border: 3px solid greenyellow;
+        width: 80vh;
+        height: 80vh;
+      }
+    }
+
+    section.about-me {
+      background-color: $theme-Color;
+      display: flex;
+      text-align: center;
+      padding: 3rem;
+      justify-content: center;
+
+      h3 {
+        font-size: 2rem;
+      }
+      p {
+        margin: 1rem;
+      }
+      section.description {
+        width: 50%;
+      }
+    }
+
+    section.info {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 2rem;
+      section.table {
+        //border: 3px solid red;
+        flex: 5 1 500px;
+        padding: 2rem;
+        table {
+          border-collapse: collapse;
+          --bs-table-bg: none;
+          //section.table找到
+          //--bs-table-bg: var(--bs-body-bg);
+          //然後取消勾選
+          //才能透過去
+          tr {
+            border-bottom: 2px solid grey;
+            transition: all 0.3s ease-in;
+
+            &:hover {
+              background-color: rgb(246, 234, 250);
+            }
+            td {
+              padding: 1rem;
+            }
+          }
+        }
+      }
+      section.image {
+        flex: 1 0 500px;
+        //border: 3px solid black;
+        padding: 2rem;
+        align-items: strech;
+        position: relative;
+        img {
+          // border: 3px solid black;
+          width: 80%;
+          display: flex;
+          justify-content: center;
+        }
+
+        div.greenRect1 {
+          width: 30vw;
+          height: 90vh;
+          border: 15px solid $theme-Color;
+          position: absolute;
+          top: 0vh;
+          left: 10vh;
+          z-index: -3;
+        }
+
+        div.greenRect2 {
+          width: 68vw;
+          height: 19vh;
+          border: 15px solid $theme-Color;
+          position: absolute;
+          top: 40vh;
+          left: -50vh;
+          z-index: -2;
+        }
+
+        div.greenRect3 {
+          width: 55vw;
+          height: 14vh;
+          border: 15px solid $theme-Color;
+          position: absolute;
+          top: 35vh;
+          left: -30vh;
+          z-index: -2;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 578px) {
+  body section.description {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    main {
+      section.about-me {
+        section.description {
+          width: 80%;
+        }
+      }
+
+      section.info {
+        overflow-x: auto;
+        section.image {
+          div.greenRect1,
+          div.greenRect2,
+          div.greenRect3 {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
